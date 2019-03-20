@@ -5,3 +5,4 @@ http:
   rules:
     - selector: protocol.CountService.Incr
       post: /v1/count/incr
+      body: "*"
