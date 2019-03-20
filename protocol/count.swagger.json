@@ -26,6 +26,16 @@
             }
           }
         },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protocolIncrRequest"
+            }
+          }
+        ],
         "tags": [
           "CountService"
         ]
@@ -33,6 +43,23 @@
     }
   },
   "definitions": {
+    "protocolIncrRequest": {
+      "type": "object",
+      "properties": {
+        "api": {
+          "type": "string"
+        },
+        "sid": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        }
+      }
+    },
     "protocolIncrResponse": {
       "type": "object",
       "properties": {
