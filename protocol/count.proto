@@ -21,4 +21,19 @@ message IncrResponse {
     int32 code = 3;
     string error = 4;
     int32 count = 5;
+
+    string picture = 6;
+    int32 age = 7;
+    string name = 8;
+    string gender = 9;
+    string company = 10;
+    string email = 11;
+    string phone = 12;
+    string address = 13;
+    string about = 14;
+    string registered = 15;
+    float latitude = 16;
+    float longitude = 17;
+    repeated string tags = 18;
+    bool isActive = 19;
 }

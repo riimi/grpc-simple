@@ -55,6 +55,21 @@ type IncrResponse struct {
 	Code      int32  `json:"code"`
 	Error     string `json:"error"`
 	Count     int32  `json:"count"`
+
+	Picture    string   `json:"picture"`
+	Age        int32    `json:"age"`
+	Name       string   `json:"name"`
+	Gender     string   `json:"gender"`
+	Company    string   `json:"company"`
+	Email      string   `json:"email"`
+	Phone      string   `json:"phone"`
+	Address    string   `json:"address"`
+	About      string   `json:"about"`
+	Registered string   `json:"registered"`
+	Latitude   float32  `json:"latitude"`
+	Longitude  float32  `json:"longitude"`
+	Tags       []string `json:"tags"`
+	IsActive   bool     `json:"is_active"`
 }
 
 func (s *CountService) CountHandler(w http.ResponseWriter, r *http.Request) {
