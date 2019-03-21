@@ -95,6 +95,22 @@ func (s *CountService) Incr(ctx context.Context, req *protocol.IncrRequest) (*pr
 	res := &protocol.IncrResponse{
 		Timestamp: ptypes.TimestampNow(),
 		Api:       "Incr",
+
+		IsActive: false,
+		Picture:  "http://placehold.it/32x32",
+		Age:      22,
+		Name:     "Holman Stanley",
+		Gender:   "male",
+		Company:  "VERTON",
+		Email:    "holmanstanley@verton.com",
+		Phone:    "+1 (940) 468-2790",
+		Address:  "151 Cheever Place, Newry, Nebraska, 4336",
+		About: `Ex ea quis laborum consectetur labore. Culpa enim amet magna Lorem Lorem dolore labore magna 
+reprehenderit sint in consectetur. Adipisicing in commodo magna in ea consequat id.\r\n`,
+		Registered: "2015-01-12T08:14:16 -09:00",
+		Latitude:   73.232539,
+		Longitude:  163.6669,
+		Tags:       []string{"do", "magna", "sint", "proident", "cillum", "sint", "laboris"},
 	}
 	cnt, err := s.repo.Incr(req.Key)
 	if err != nil {

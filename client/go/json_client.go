@@ -44,6 +44,8 @@ func (j *JsonClient) LoadTest() func(context.Context, interface{}) {
 			log.Print(err)
 			return
 		}
+		//bs, _ := ioutil.ReadAll(res.Body)
+		//log.Print(string(bs))
 		io.Copy(ioutil.Discard, res.Body)
 		res.Body.Close()
 	}

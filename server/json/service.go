@@ -116,6 +116,22 @@ func (s *CountService) Incr(c *gin.Context) {
 	res := &IncrResponse{
 		Timestamp: time.Now().String(),
 		Api:       "Incr",
+
+		IsActive: false,
+		Picture:  "http://placehold.it/32x32",
+		Age:      22,
+		Name:     "Holman Stanley",
+		Gender:   "male",
+		Company:  "VERTON",
+		Email:    "holmanstanley@verton.com",
+		Phone:    "+1 (940) 468-2790",
+		Address:  "151 Cheever Place, Newry, Nebraska, 4336",
+		About: `Ex ea quis laborum consectetur labore. Culpa enim amet magna Lorem Lorem dolore labore magna 
+reprehenderit sint in consectetur. Adipisicing in commodo magna in ea consequat id.\r\n`,
+		Registered: "2015-01-12T08:14:16 -09:00",
+		Latitude:   73.232539,
+		Longitude:  163.6669,
+		Tags:       []string{"do", "magna", "sint", "proident", "cillum", "sint", "laboris"},
 	}
 
 	if err := c.Bind(req); err != nil {
